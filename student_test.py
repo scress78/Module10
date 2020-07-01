@@ -39,11 +39,11 @@ class MyTestCase(unittest.TestCase):
             aStudent = Student('Duck', '896')
             #p = t.Person('Duck', '123')
 
-    """def test_object_not_created_error_ssn(self):
+    def test_object_not_created_error_major(self):
         with self.assertRaises(ValueError):
-            p = t.Person('Duck', 'Daisy', 'abc')
+            aStudent = Student('Duck', 'Daisy')
 
-    def test_person_class_display_name(self):
+    """def test_person_class_display_name(self):
         self.assertEqual(str(self.person), "Duck, Daisy:")   # Uses person from setUp()
 
     def test_person_class_display_name_ssn(self):

@@ -15,13 +15,14 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.student.major, 'AAS')
         #self.assertEqual(self.student.gpa, 4.0)
 
-    """def test_inital_all_attributes(self):
-        person = t.Person('Duck', 'Daisy', '111-11-1111') # this is not self.person from setUp, but local
-        assert person.last_name == 'Duck'                 # note no self here on person or assert
-        assert person.first_name == 'Daisy'
-        assert person.ssn == '111-11-1111'
+    def test_inital_all_attributes(self):
+        self.assertEqual(self.student.last_name, 'Duck')
+        self.assertEqual(self.student.first_name, 'Daisy')
+        self.assertEqual(self.student.major, 'AAS')
+        self.assertEqual(self.student.gpa, 4.0)
 
-    def test_object_not_created_error_last_name(self):
+
+    """def test_object_not_created_error_last_name(self):
         with self.assertRaises(ValueError):
             p = t.Person('123', 'Daisy')
 

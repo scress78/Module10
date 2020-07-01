@@ -6,7 +6,10 @@ class Student:
             raise ValueError
         if fname == '':
             raise ValueError
-        if not (name_characters.issuperset(lname) and name_characters.issuperset(fname)):
+        if major == '':
+            raise ValueError
+        if not (name_characters.issuperset(lname) and name_characters.issuperset(fname) and
+                name_characters.issuperset(major)):
             raise ValueError
 
         if lname is None:

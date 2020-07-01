@@ -43,6 +43,10 @@ class MyTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             aStudent = Student('Duck', 'Daisy')
 
+    def test_object_not_created_error_gpa(self):
+        with self.assertRaises(ValueError):
+            aStudent = Student('Duck', 'Daisy', 'AAS')
+
     """def test_person_class_display_name(self):
         self.assertEqual(str(self.person), "Duck, Daisy:")   # Uses person from setUp()
 

@@ -16,10 +16,12 @@ class MyTestCase(unittest.TestCase):
         #self.assertEqual(self.student.gpa, 4.0)
 
     def test_inital_all_attributes(self):
-        self.assertEqual(self.student.last_name, 'Duck')
-        self.assertEqual(self.student.first_name, 'Daisy')
-        self.assertEqual(self.student.major, 'AAS')
-        self.assertEqual(self.student.gpa, 4.0)
+        aStudent = Student('Duck', 'Daisy', 'AAS')
+        assert aStudent.last_name == 'Duck'
+        assert aStudent.first_name == 'Daisy'
+        assert aStudent.major == 'AAS'
+        assert aStudent.gpa == 0.0
+
 
     def test_student_str(self):
         self.assertEqual(str(self.student), 'Duck, Daisy has major AASwith gpa: 4.0')
@@ -27,6 +29,10 @@ class MyTestCase(unittest.TestCase):
     def test_object_not_created_error_last_name(self):
         with self.assertRaises(ValueError):
             aStudent = Student()
+            """try:
+                aStudent = Student()
+            except TypeError:
+                raise ValueError"""
 
     """def test_object_not_created_error_fist_name(self):
         with self.assertRaises(ValueError):

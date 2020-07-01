@@ -34,11 +34,12 @@ class MyTestCase(unittest.TestCase):
             except TypeError:
                 raise ValueError"""
 
-    """def test_object_not_created_error_fist_name(self):
+    def test_object_not_created_error_fist_name(self):
         with self.assertRaises(ValueError):
-            p = t.Person('Duck', '123')
+            aStudent = Student('Duck', '896')
+            #p = t.Person('Duck', '123')
 
-    def test_object_not_created_error_ssn(self):
+    """def test_object_not_created_error_ssn(self):
         with self.assertRaises(ValueError):
             p = t.Person('Duck', 'Daisy', 'abc')
 

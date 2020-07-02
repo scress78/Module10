@@ -1,6 +1,20 @@
+"""
+Program: student.py
+Author: Spencer Cress
+Date: 7/1/2020
+
+Student class for Unit Test for a class assignment
+"""
+
 class Student:
     """Student class"""
     def __init__(self, lname='', fname='', major='', gpa=0.0):
+        """
+        :param lname: string, a student's last name
+        :param fname: string, a student's first name
+        :param major: string, a student's major
+        :param gpa: float, a number between 0 and 5 that is the student's gpa
+        """
         name_characters = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'-")
         if lname == '':
             raise ValueError
@@ -23,8 +37,3 @@ class Student:
 
     def __str__(self):
         return self.last_name + ", " + self.first_name + " has major " + self.major + "with gpa: " + str(self.gpa)
-
-a = Student('Duck', 'Daisy', 'AAS')
-print(a.gpa)
-b = a.gpa + 2
-print(b)

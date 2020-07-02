@@ -11,17 +11,20 @@ class Student:
         if not (name_characters.issuperset(lname) and name_characters.issuperset(fname) and
                 name_characters.issuperset(major)):
             raise ValueError
-
-        if lname is None:
+        if isinstance(gpa, float) is False:
+            raise ValueError
+        if gpa < 0 or gpa > 5:
             raise ValueError
 
-        try:
-            self.last_name = lname
-        except TypeError:
-            raise ValueError
+        self.last_name = lname
         self.first_name = fname
         self.major = major
         self.gpa = gpa
 
     def __str__(self):
         return self.last_name + ", " + self.first_name + " has major " + self.major + "with gpa: " + str(self.gpa)
+
+a = Student('Duck', 'Daisy', 'AAS')
+print(a.gpa)
+b = a.gpa + 2
+print(b)
